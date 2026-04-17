@@ -241,4 +241,5 @@ if __name__ == "__main__":
     print(f"🛒 {NOMBRE_TIENDA} - Chatbot iniciado")
     print("🔗 Webhook disponible en: http://localhost:5000/webhook")
     print("🧪 Prueba local en:       http://localhost:5000/test?msg=hola")
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port, debug=True)
